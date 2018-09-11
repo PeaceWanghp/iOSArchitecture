@@ -1,15 +1,15 @@
 //
-//  AnimalCell.h
+//  AnimalEntity.m
 //  iOSArchitecture
 //
 //  Created by peace on 2018/9/10.
 //  Copyright © 2018 peace. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AnimalEntity.h"
 
-@interface AnimalCell : UITableViewCell
+@implementation AnimalEntity
 
-- (void)showImageWithData:(NSData *)data;
+
 
 @end

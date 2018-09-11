@@ -15,6 +15,8 @@
 		CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391530214610060019DD5B /* AnimalTableViewController.m */; };
 		CE391534214610310019DD5B /* AnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391533214610310019DD5B /* AnimalCell.m */; };
 		CE391537214610590019DD5B /* AnimalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391536214610590019DD5B /* AnimalModel.m */; };
+		CE39153A214613B70019DD5B /* MAnimalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391539214613B70019DD5B /* MAnimalTableViewController.m */; };
+		CE39153D214619A00019DD5B /* AnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE39153C214619A00019DD5B /* AnimalEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		CE391533214610310019DD5B /* AnimalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalCell.m; sourceTree = "<group>"; };
 		CE391535214610590019DD5B /* AnimalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalModel.h; sourceTree = "<group>"; };
 		CE391536214610590019DD5B /* AnimalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalModel.m; sourceTree = "<group>"; };
+		CE391538214613B70019DD5B /* MAnimalTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalTableViewController.h; sourceTree = "<group>"; };
+		CE391539214613B70019DD5B /* MAnimalTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalTableViewController.m; sourceTree = "<group>"; };
+		CE39153B214619A00019DD5B /* AnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalEntity.h; sourceTree = "<group>"; };
+		CE39153C214619A00019DD5B /* AnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 				CE391533214610310019DD5B /* AnimalCell.m */,
 				CE391535214610590019DD5B /* AnimalModel.h */,
 				CE391536214610590019DD5B /* AnimalModel.m */,
+				CE39153B214619A00019DD5B /* AnimalEntity.h */,
+				CE39153C214619A00019DD5B /* AnimalEntity.m */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -95,6 +103,8 @@
 		CE39152D21460F820019DD5B /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CE391538214613B70019DD5B /* MAnimalTableViewController.h */,
+				CE391539214613B70019DD5B /* MAnimalTableViewController.m */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -168,12 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE39153D214619A00019DD5B /* AnimalEntity.m in Sources */,
 				CE391518214609D70019DD5B /* ViewController.m in Sources */,
 				CE391537214610590019DD5B /* AnimalModel.m in Sources */,
 				CE391523214609D90019DD5B /* main.m in Sources */,
 				CE391515214609D70019DD5B /* AppDelegate.m in Sources */,
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
+				CE39153A214613B70019DD5B /* MAnimalTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "AnimalTableViewController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) NSMutableArray *dataSource;
@@ -58,6 +60,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if (indexPath.row == 0) {
+        AnimalTableViewController *viewController = [[AnimalTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else if (indexPath.row == 1) {
+        AnimalTableViewController *viewController = [[AnimalTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 @end
