@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "AnimalTableViewController.h"
+#import "MAnimalViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -65,7 +66,7 @@
         [self.navigationController pushViewController:viewController animated:YES];
     }
     else if (indexPath.row == 1) {
-        AnimalTableViewController *viewController = [[AnimalTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        MAnimalViewController *viewController = [[MAnimalViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
