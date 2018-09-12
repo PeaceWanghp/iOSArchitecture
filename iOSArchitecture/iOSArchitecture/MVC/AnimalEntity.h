@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSData *imageData;
 @property (nonatomic,copy) NSString *imageUrl;
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) NSString *description;
+@property (nonatomic,copy) NSString *summary;
+@property (nonatomic,assign) BOOL isLoading;
 
 @end

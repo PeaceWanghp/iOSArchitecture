@@ -26,7 +26,13 @@
 
 - (void)showImageWithData:(NSData *)data {
     UIImage *image = [UIImage imageWithData:data];
-    self.imageView.image = image;
+    if (image) {
+        self.imageView.image = image;
+    }
+    else {
+        image = [UIImage imageNamed:@"defaultImage"];
+        self.imageView.image = image;
+    }
 }
 
 @end

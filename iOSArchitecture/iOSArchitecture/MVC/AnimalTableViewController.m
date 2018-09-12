@@ -11,7 +11,7 @@
 #import "AnimalCell.h"
 #import "AnimalModel.h"
 
-@interface AnimalTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface AnimalTableViewController ()<UITableViewDelegate,UITableViewDataSource,AnimalModelDelegate>
 @property(nonatomic,strong) AnimalModel *animalModel;
 @end
 
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     _animalModel = [[AnimalModel alloc] init];
+    _animalModel.delegate = self;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -43,15 +44,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *reuseIdentifier = @"reuseIdentifier";
-    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
-        cell = [[AnimalCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+        cell = [[AnimalCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
     AnimalEntity *entity = [_animalModel animalEntityWitIndexPath:indexPath.row];
     
     cell.textLabel.text = entity.name;
-    cell.detailTextLabel.text = entity.description;
+    cell.detailTextLabel.text = entity.summary;
     [cell showImageWithData:entity.imageData];
     
     return cell;
@@ -60,7 +61,9 @@
 #pragma mark -
 #pragma mark --
 - (void)animalShowImage:(AnimalEntity *)entity row:(NSInteger)row {
-    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil]
+                          withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end
