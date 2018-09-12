@@ -105,12 +105,8 @@
 			children = (
 				CE39152F214610060019DD5B /* AnimalTableViewController.h */,
 				CE391530214610060019DD5B /* AnimalTableViewController.m */,
-				CE391532214610310019DD5B /* AnimalCell.h */,
-				CE391533214610310019DD5B /* AnimalCell.m */,
-				CE391535214610590019DD5B /* AnimalModel.h */,
-				CE391536214610590019DD5B /* AnimalModel.m */,
-				CE39153B214619A00019DD5B /* AnimalEntity.h */,
-				CE39153C214619A00019DD5B /* AnimalEntity.m */,
+				CE82870E21490ABC008F11CD /* Model */,
+				CE82870D21490AAF008F11CD /* View */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -154,6 +150,26 @@
 			children = (
 				CE8286FE21490527008F11CD /* MAnimalModel.h */,
 				CE8286FF21490527008F11CD /* MAnimalModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE82870D21490AAF008F11CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE391532214610310019DD5B /* AnimalCell.h */,
+				CE391533214610310019DD5B /* AnimalCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE82870E21490ABC008F11CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE391535214610590019DD5B /* AnimalModel.h */,
+				CE391536214610590019DD5B /* AnimalModel.m */,
+				CE39153B214619A00019DD5B /* AnimalEntity.h */,
+				CE39153C214619A00019DD5B /* AnimalEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
