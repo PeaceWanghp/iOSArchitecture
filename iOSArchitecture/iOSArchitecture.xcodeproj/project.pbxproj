@@ -24,6 +24,7 @@
 		CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828708214909DE008F11CD /* MAnimalTableView.m */; };
 		CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828710214915D9008F11CD /* MAnimalEntity.m */; };
 		CE828713214A13E5008F11CD /* jsonString.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828712214A13E5008F11CD /* jsonString.json */; };
+		CE828717214A18F5008F11CD /* MRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828716214A18F5008F11CD /* MRViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		CE82870F214915D9008F11CD /* MAnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalEntity.h; sourceTree = "<group>"; };
 		CE828710214915D9008F11CD /* MAnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalEntity.m; sourceTree = "<group>"; };
 		CE828712214A13E5008F11CD /* jsonString.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonString.json; sourceTree = "<group>"; };
+		CE828715214A18F5008F11CD /* MRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRViewController.h; sourceTree = "<group>"; };
+		CE828716214A18F5008F11CD /* MRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 				CE391517214609D70019DD5B /* ViewController.m */,
 				CE39152C21460F770019DD5B /* MVC */,
 				CE39152D21460F820019DD5B /* MVVM */,
+				CE828714214A18CD008F11CD /* MVVM+RAC */,
 				CE39151C214609D90019DD5B /* Assets.xcassets */,
 				CE39151E214609D90019DD5B /* LaunchScreen.storyboard */,
 				CE391521214609D90019DD5B /* Info.plist */,
@@ -182,6 +186,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CE828714214A18CD008F11CD /* MVVM+RAC */ = {
+			isa = PBXGroup;
+			children = (
+				CE828715214A18F5008F11CD /* MRViewController.h */,
+				CE828716214A18F5008F11CD /* MRViewController.m */,
+			);
+			path = "MVVM+RAC";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +275,7 @@
 				CE391523214609D90019DD5B /* main.m in Sources */,
 				CE391515214609D70019DD5B /* AppDelegate.m in Sources */,
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
+				CE828717214A18F5008F11CD /* MRViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
 				CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */,
 				CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */,

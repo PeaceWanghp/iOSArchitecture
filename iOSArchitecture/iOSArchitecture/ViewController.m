@@ -10,6 +10,7 @@
 
 #import "AnimalTableViewController.h"
 #import "MAnimalViewController.h"
+#import "MRViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,7 +30,7 @@
     _dataSource = [NSMutableArray array];
     [_dataSource addObject:@"MVC"];
     [_dataSource addObject:@"MVVM"];
-    [_dataSource addObject:@"三层架构"];
+    [_dataSource addObject:@"MVVM+RAC"];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -67,6 +68,10 @@
     }
     else if (indexPath.row == 1) {
         MAnimalViewController *viewController = [[MAnimalViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else if (indexPath.row == 2) {
+        MRViewController *viewController = [[MRViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
