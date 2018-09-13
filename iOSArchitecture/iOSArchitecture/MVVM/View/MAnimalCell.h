@@ -10,4 +10,6 @@
 
 @interface MAnimalCell : UITableViewCell
 
+- (void)showImageWithData:(NSData *)data;
+
 @end

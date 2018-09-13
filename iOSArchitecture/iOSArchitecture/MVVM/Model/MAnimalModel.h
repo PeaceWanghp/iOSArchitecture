@@ -10,4 +10,6 @@
 
 @interface MAnimalModel : NSObject
 
+@property (nonatomic,strong) NSArray *dataSource;
+
 @end

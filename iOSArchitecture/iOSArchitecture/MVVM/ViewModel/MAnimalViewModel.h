@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MAnimalViewEntity.h"
+
 @interface MAnimalViewModel : NSObject
+
+@property (nonatomic,strong,readonly) NSArray *dataSource;
 
 @end

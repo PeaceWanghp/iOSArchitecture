@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"MVC";
+    
     _animalModel = [[AnimalModel alloc] init];
     _animalModel.delegate = self;
     

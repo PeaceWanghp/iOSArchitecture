@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MAnimalViewModel.h"
+
 @interface MAnimalTableView : UITableView
+
+@property (nonatomic,strong) MAnimalViewModel *viewModel;
 
 @end

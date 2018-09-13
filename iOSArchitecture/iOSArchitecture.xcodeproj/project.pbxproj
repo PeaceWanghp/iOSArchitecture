@@ -19,9 +19,10 @@
 		CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286F9214904B2008F11CD /* MAnimalCell.m */; };
 		CE8286FD21490506008F11CD /* MAnimalViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286FC21490506008F11CD /* MAnimalViewModel.m */; };
 		CE82870021490527008F11CD /* MAnimalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286FF21490527008F11CD /* MAnimalModel.m */; };
-		CE828703214905A9008F11CD /* MAnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828702214905A9008F11CD /* MAnimalEntity.m */; };
+		CE828703214905A9008F11CD /* MAnimalViewEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828702214905A9008F11CD /* MAnimalViewEntity.m */; };
 		CE828706214909AD008F11CD /* MAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828705214909AD008F11CD /* MAnimalViewController.m */; };
 		CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828708214909DE008F11CD /* MAnimalTableView.m */; };
+		CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828710214915D9008F11CD /* MAnimalEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +49,14 @@
 		CE8286FC21490506008F11CD /* MAnimalViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalViewModel.m; sourceTree = "<group>"; };
 		CE8286FE21490527008F11CD /* MAnimalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalModel.h; sourceTree = "<group>"; };
 		CE8286FF21490527008F11CD /* MAnimalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalModel.m; sourceTree = "<group>"; };
-		CE828701214905A9008F11CD /* MAnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalEntity.h; sourceTree = "<group>"; };
-		CE828702214905A9008F11CD /* MAnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalEntity.m; sourceTree = "<group>"; };
+		CE828701214905A9008F11CD /* MAnimalViewEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalViewEntity.h; sourceTree = "<group>"; };
+		CE828702214905A9008F11CD /* MAnimalViewEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalViewEntity.m; sourceTree = "<group>"; };
 		CE828704214909AD008F11CD /* MAnimalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalViewController.h; sourceTree = "<group>"; };
 		CE828705214909AD008F11CD /* MAnimalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalViewController.m; sourceTree = "<group>"; };
 		CE828707214909DE008F11CD /* MAnimalTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalTableView.h; sourceTree = "<group>"; };
 		CE828708214909DE008F11CD /* MAnimalTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalTableView.m; sourceTree = "<group>"; };
+		CE82870F214915D9008F11CD /* MAnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalEntity.h; sourceTree = "<group>"; };
+		CE828710214915D9008F11CD /* MAnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +142,8 @@
 			children = (
 				CE8286FB21490506008F11CD /* MAnimalViewModel.h */,
 				CE8286FC21490506008F11CD /* MAnimalViewModel.m */,
-				CE828701214905A9008F11CD /* MAnimalEntity.h */,
-				CE828702214905A9008F11CD /* MAnimalEntity.m */,
+				CE828701214905A9008F11CD /* MAnimalViewEntity.h */,
+				CE828702214905A9008F11CD /* MAnimalViewEntity.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +153,8 @@
 			children = (
 				CE8286FE21490527008F11CD /* MAnimalModel.h */,
 				CE8286FF21490527008F11CD /* MAnimalModel.m */,
+				CE82870F214915D9008F11CD /* MAnimalEntity.h */,
+				CE828710214915D9008F11CD /* MAnimalEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +260,8 @@
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
 				CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */,
-				CE828703214905A9008F11CD /* MAnimalEntity.m in Sources */,
+				CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */,
+				CE828703214905A9008F11CD /* MAnimalViewEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
