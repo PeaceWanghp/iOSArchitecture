@@ -23,6 +23,7 @@
 		CE828706214909AD008F11CD /* MAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828705214909AD008F11CD /* MAnimalViewController.m */; };
 		CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828708214909DE008F11CD /* MAnimalTableView.m */; };
 		CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828710214915D9008F11CD /* MAnimalEntity.m */; };
+		CE828713214A13E5008F11CD /* jsonString.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828712214A13E5008F11CD /* jsonString.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		CE828708214909DE008F11CD /* MAnimalTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalTableView.m; sourceTree = "<group>"; };
 		CE82870F214915D9008F11CD /* MAnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalEntity.h; sourceTree = "<group>"; };
 		CE828710214915D9008F11CD /* MAnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalEntity.m; sourceTree = "<group>"; };
+		CE828712214A13E5008F11CD /* jsonString.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonString.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		CE82870C21490A3E008F11CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE828712214A13E5008F11CD /* jsonString.json */,
 				CE8286FE21490527008F11CD /* MAnimalModel.h */,
 				CE8286FF21490527008F11CD /* MAnimalModel.m */,
 				CE82870F214915D9008F11CD /* MAnimalEntity.h */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE828713214A13E5008F11CD /* jsonString.json in Resources */,
 				CE391520214609D90019DD5B /* LaunchScreen.storyboard in Resources */,
 				CE39151D214609D90019DD5B /* Assets.xcassets in Resources */,
 			);

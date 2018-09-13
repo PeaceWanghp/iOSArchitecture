@@ -8,26 +8,55 @@
 
 #import "MAnimalViewModel.h"
 
+#import "MAnimalModel.h"
+
+@interface MAnimalViewModel()<MAnimalModelDelegate>
+@property (nonatomic,strong) MAnimalModel *animalModel;
+@end
+
 @implementation MAnimalViewModel
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        MAnimalViewEntity *entity = nil;
+        _animalModel = [[MAnimalModel alloc] init];
+        _animalModel.delegate = self;
+        
+        MAnimalViewEntity *vieweEtity = nil;
         
         NSMutableArray *mutableArray = [NSMutableArray array];
-        for (int i = 0; i < 10; i ++) {
-            entity = [[MAnimalViewEntity alloc] init];
-            entity.identifier = [[NSDate date] timeIntervalSince1970];
-            entity.imageData = nil;
-            entity.name = @"牛";
-            entity.summary = @"牛很勤恳";
+        for (MAnimalEntity *entity in _animalModel.dataSource) {
+            vieweEtity = [[MAnimalViewEntity alloc] init];
+            vieweEtity.identifier = entity.identifier;
+            vieweEtity.imageData = entity.imageData;
+            vieweEtity.name = entity.name;
+            vieweEtity.summary = entity.summary;
             [mutableArray addObject:entity];
         }
         
         _dataSource = mutableArray;
     }
     return self;
+}
+
+- (MAnimalViewEntity *)animalEntityWitIndexPath:(NSInteger)row {
+    MAnimalViewEntity *viewEntity = [_dataSource objectAtIndex:row];
+    
+    if (_animalModel.dataSource.count > row) {
+        MAnimalEntity *entity = [_animalModel.dataSource objectAtIndex:row];
+        [_animalModel downloadImageWtihEntity:entity];
+    }
+    
+    return viewEntity;
+}
+
+- (void)animalShowImage:(MAnimalEntity *)entity row:(NSInteger)row {
+    MAnimalViewEntity *viewEntity = [_dataSource objectAtIndex:row];
+    viewEntity.imageData = entity.imageData;
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(viewModel:reloadRow:)]) {
+        [_delegate viewModel:self reloadRow:row];
+    }
 }
 
 @end

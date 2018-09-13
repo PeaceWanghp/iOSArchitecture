@@ -28,6 +28,10 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>jsonString.json</key>
+		<data>
+		kDsu56nxgU8MdTMlESQ4Hf4WfsM=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -57,6 +61,13 @@
 			<key>hash2</key>
 			<data>
 			+FvycDqeC2tTO23gCx9j2c1fktsiwhivN+HeTWzkzIY=
+			</data>
+		</dict>
+		<key>jsonString.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ez6PFjDKSC6+6mIpG/94clI/aVd4GudIyvakR/KzoH8=
 			</data>
 		</dict>
 	</dict>

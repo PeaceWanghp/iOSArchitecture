@@ -9,9 +9,17 @@
 #import <Foundation/Foundation.h>
 
 #import "MAnimalViewEntity.h"
+@protocol MAnimalViewModelDelegate;
 
 @interface MAnimalViewModel : NSObject
 
-@property (nonatomic,strong,readonly) NSArray *dataSource;
+@property (nonatomic,weak) id<MAnimalViewModelDelegate> delegate;
+@property (nonatomic,strong,readonly) NSArray <MAnimalViewEntity*>*dataSource;
 
+- (MAnimalViewEntity *)animalEntityWitIndexPath:(NSInteger)row;
+
+@end
+
+@protocol MAnimalViewModelDelegate<NSObject>
+- (void)viewModel:(MAnimalViewModel *)viewModel reloadRow:(NSInteger)row;
 @end

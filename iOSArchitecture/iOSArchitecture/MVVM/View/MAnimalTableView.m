@@ -10,7 +10,7 @@
 
 #import "MAnimalCell.h"
 
-@interface MAnimalTableView()<UITableViewDelegate,UITableViewDataSource>
+@interface MAnimalTableView()<UITableViewDelegate,UITableViewDataSource,MAnimalViewModelDelegate>
 
 @end
 
@@ -23,8 +23,16 @@
         self.dataSource = self;
         
         self.viewModel = [[MAnimalViewModel alloc] init];
+        self.viewModel.delegate = self;
     }
     return self;
+}
+
+#pragma mark -
+#pragma mark -- MAnimalViewModel Delegate
+- (void)viewModel:(MAnimalViewModel *)viewModel reloadRow:(NSInteger)row {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 #pragma mark -
@@ -45,7 +53,7 @@
         cell = [[MAnimalCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
-    MAnimalViewEntity *entity = [self.viewModel.dataSource objectAtIndex:indexPath.row];
+    MAnimalViewEntity *entity = [_viewModel animalEntityWitIndexPath:indexPath.row];
     
     cell.textLabel.text = entity.name;
     cell.detailTextLabel.text = entity.summary;
@@ -54,12 +62,8 @@
     return cell;
 }
 
-#pragma mark -
-#pragma mark --
-- (void)animalRloadRow:(NSInteger)row {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-    [self reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil]
-                          withRowAnimation:UITableViewRowAnimationNone];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

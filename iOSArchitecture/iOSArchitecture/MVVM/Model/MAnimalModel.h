@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MAnimalEntity.h"
+@protocol MAnimalModelDelegate;
+
 @interface MAnimalModel : NSObject
 
-@property (nonatomic,strong) NSArray *dataSource;
+@property (nonatomic,weak) id<MAnimalModelDelegate> delegate;
+@property (nonatomic,strong) NSArray <MAnimalEntity*>*dataSource;
 
+- (void)downloadImageWtihEntity:(MAnimalEntity *)entity;
+
+@end
+
+@protocol MAnimalModelDelegate<NSObject>
+- (void)animalShowImage:(MAnimalEntity *)entity row:(NSInteger)row;
 @end
