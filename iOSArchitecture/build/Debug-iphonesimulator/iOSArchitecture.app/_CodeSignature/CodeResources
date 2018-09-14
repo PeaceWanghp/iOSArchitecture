@@ -28,6 +28,10 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>animal.json</key>
+		<data>
+		/HoP8aEEjP8mrVHkoGG+tqwYBpM=
+		</data>
 		<key>jsonString.json</key>
 		<data>
 		kDsu56nxgU8MdTMlESQ4Hf4WfsM=
@@ -61,6 +65,13 @@
 			<key>hash2</key>
 			<data>
 			+FvycDqeC2tTO23gCx9j2c1fktsiwhivN+HeTWzkzIY=
+			</data>
+		</dict>
+		<key>animal.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ALz/E7o1U8ad9zdwZxelfQ8dSDEsPWMHZGN4+9R2/jU=
 			</data>
 		</dict>
 		<key>jsonString.json</key>
