@@ -62,22 +62,14 @@
     
     dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
     dispatch_async(globalQueue, ^{
-        
-        NSLog(@"开始下载图片:%@", [NSThread currentThread]);
-        
         NSURL *imageURL = [NSURL URLWithString:entity.imageUrl];
-        //下载图片
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
         if (imageData) {
             entity.imageData = imageData;
         }
         NSLog(@"imageData = %@",imageData);
         
-        //从子线程回到主线程(方式二：常用)
-        //组合：主队列异步执行
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"回到主线程:%@", [NSThread currentThread]);
-            //更新界面
             if (self.delegate && [self.delegate respondsToSelector:@selector(animalShowImage:row:)]) {
                 NSInteger row = [self.dataSource indexOfObject:entity];
                 [self.delegate animalShowImage:entity row:row];
