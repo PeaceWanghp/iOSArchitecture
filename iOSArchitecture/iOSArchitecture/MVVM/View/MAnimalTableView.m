@@ -28,11 +28,19 @@
     return self;
 }
 
+- (void)refreshData {
+    [self.viewModel reloadData];
+}
+
 #pragma mark -
 #pragma mark -- MAnimalViewModel Delegate
 - (void)viewModel:(MAnimalViewModel *)viewModel reloadRow:(NSInteger)row {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)reloadDataWithViewModel:(MAnimalViewModel *)viewModel {
+    [self reloadData];
 }
 
 #pragma mark -
@@ -62,8 +70,26 @@
     return cell;
 }
 
+#pragma mark -
+#pragma mark -- UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                                                            title:@"Delete"
+                                                                          handler:^(UITableViewRowAction *action,
+                                                                                    NSIndexPath *indexPath) {
+                                                                              [self.viewModel deleteWithRow:indexPath.row];
+                                                                              
+                                                                              [tableView beginUpdates];
+                                                                              [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                                                                              [tableView endUpdates];
+                                                                          }];
+    return @[deleteAction];
+}
+
 
 @end

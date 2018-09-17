@@ -22,19 +22,7 @@
         _animalModel = [[MAnimalModel alloc] init];
         _animalModel.delegate = self;
         
-        MAnimalViewEntity *vieweEtity = nil;
-        
-        NSMutableArray *mutableArray = [NSMutableArray array];
-        for (MAnimalEntity *entity in _animalModel.dataSource) {
-            vieweEtity = [[MAnimalViewEntity alloc] init];
-            vieweEtity.identifier = entity.identifier;
-            vieweEtity.imageData = entity.imageData;
-            vieweEtity.name = entity.name;
-            vieweEtity.summary = entity.summary;
-            [mutableArray addObject:entity];
-        }
-        
-        _dataSource = mutableArray;
+        [self reloadData];
     }
     return self;
 }
@@ -56,6 +44,30 @@
     
     if (_delegate && [_delegate respondsToSelector:@selector(viewModel:reloadRow:)]) {
         [_delegate viewModel:self reloadRow:row];
+    }
+}
+
+- (void)deleteWithRow:(NSInteger)row {
+    [_dataSource removeObjectAtIndex:row];
+}
+
+- (void)reloadData {
+    MAnimalViewEntity *vieweEtity = nil;
+    
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (MAnimalEntity *entity in _animalModel.dataSource) {
+        vieweEtity = [[MAnimalViewEntity alloc] init];
+        vieweEtity.identifier = entity.identifier;
+        vieweEtity.imageData = entity.imageData;
+        vieweEtity.name = entity.name;
+        vieweEtity.summary = entity.summary;
+        [mutableArray addObject:entity];
+    }
+    
+    _dataSource = mutableArray;
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(reloadDataWithViewModel:)]) {
+        [_delegate reloadDataWithViewModel:self];
     }
 }
 

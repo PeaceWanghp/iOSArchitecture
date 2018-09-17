@@ -14,12 +14,15 @@
 @interface MAnimalViewModel : NSObject
 
 @property (nonatomic,weak) id<MAnimalViewModelDelegate> delegate;
-@property (nonatomic,strong,readonly) NSArray <MAnimalViewEntity*>*dataSource;
+@property (nonatomic,strong,readonly) NSMutableArray <MAnimalViewEntity*>*dataSource;
 
 - (MAnimalViewEntity *)animalEntityWitIndexPath:(NSInteger)row;
+- (void)deleteWithRow:(NSInteger)row;
+- (void)reloadData;
 
 @end
 
 @protocol MAnimalViewModelDelegate<NSObject>
 - (void)viewModel:(MAnimalViewModel *)viewModel reloadRow:(NSInteger)row;
+- (void)reloadDataWithViewModel:(MAnimalViewModel *)viewModel;
 @end

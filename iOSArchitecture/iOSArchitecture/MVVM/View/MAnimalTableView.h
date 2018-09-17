@@ -14,4 +14,6 @@
 
 @property (nonatomic,strong) MAnimalViewModel *viewModel;
 
+- (void)refreshData;
+
 @end
