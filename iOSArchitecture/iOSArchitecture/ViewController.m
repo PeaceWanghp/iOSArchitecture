@@ -12,11 +12,10 @@
 #import "MAnimalViewController.h"
 #import "MRViewController.h"
 
+#import "ViewModel.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-
-@property(nonatomic,strong) NSMutableArray *dataSource;
-
-
+@property (nonatomic,strong) ViewModel *viewModel;
 @end
 
 @implementation ViewController
@@ -27,10 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _dataSource = [NSMutableArray array];
-    [_dataSource addObject:@"MVC"];
-    [_dataSource addObject:@"MVVM"];
-    [_dataSource addObject:@"MVVM+RAC"];
+    _viewModel = [[ViewModel alloc] init];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -45,16 +41,19 @@
 #pragma mark -
 #pragma mark -- UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataSource.count;
+    return _viewModel.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"identifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [_dataSource objectAtIndex:indexPath.row];
+    
+    ACItem *item = [_viewModel.dataSource objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.title;
+    cell.detailTextLabel.text = item.subtitle;
     
     return cell;
 }
@@ -62,16 +61,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
-        AnimalTableViewController *viewController = [[AnimalTableViewController alloc] initWithStyle:UITableViewStylePlain];
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-    else if (indexPath.row == 1) {
-        MAnimalViewController *viewController = [[MAnimalViewController alloc] init];
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-    else if (indexPath.row == 2) {
-        MRViewController *viewController = [[MRViewController alloc] init];
+    ACItem *item = [_viewModel.dataSource objectAtIndex:indexPath.row];
+    if (item.className) {
+        Class class = NSClassFromString(item.className);
+        UIViewController *viewController;
+        
+        if ([item.classType isEqualToString:@"UITableViewController"]) {
+            viewController = [[class alloc] initWithStyle:UITableViewStylePlain];
+        }
+        else if ([item.classType isEqualToString:@"UIViewController"]) {
+            viewController = [[class alloc] init];
+        }
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
