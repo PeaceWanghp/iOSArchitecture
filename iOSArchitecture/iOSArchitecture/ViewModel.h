@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString *const ACUIViewController = @"UITableViewController";
+static NSString *const ACUITableViewController = @"UITableViewController";
+
 @interface ViewModel : NSObject
 
 @property(nonatomic,strong) NSMutableArray *dataSource;

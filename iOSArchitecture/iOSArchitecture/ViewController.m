@@ -11,6 +11,7 @@
 #import "AnimalTableViewController.h"
 #import "MAnimalViewController.h"
 #import "MRViewController.h"
+#import "DiskManagementTableViewController.h"
 
 #import "ViewModel.h"
 
@@ -66,10 +67,10 @@
         Class class = NSClassFromString(item.className);
         UIViewController *viewController;
         
-        if ([item.classType isEqualToString:@"UITableViewController"]) {
+        if ([item.classType isEqualToString:ACUITableViewController]) {
             viewController = [[class alloc] initWithStyle:UITableViewStylePlain];
         }
-        else if ([item.classType isEqualToString:@"UIViewController"]) {
+        else if ([item.classType isEqualToString:ACUIViewController]) {
             viewController = [[class alloc] init];
         }
         [self.navigationController pushViewController:viewController animated:YES];

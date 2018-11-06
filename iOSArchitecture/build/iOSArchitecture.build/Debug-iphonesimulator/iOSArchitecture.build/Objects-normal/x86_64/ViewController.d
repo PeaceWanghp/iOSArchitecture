@@ -4,4 +4,5 @@ dependencies: \
   /Users/peace/Desktop/iOSArchitecture/iOSArchitecture/iOSArchitecture/MVC/AnimalTableViewController.h \
   /Users/peace/Desktop/iOSArchitecture/iOSArchitecture/iOSArchitecture/MVVM/MAnimalViewController.h \
   /Users/peace/Desktop/iOSArchitecture/iOSArchitecture/iOSArchitecture/MVVM+RAC/MRViewController.h \
+  /Users/peace/Desktop/iOSArchitecture/iOSArchitecture/iOSArchitecture/DiskManagement/DiskManagementTableViewController.h \
   /Users/peace/Desktop/iOSArchitecture/iOSArchitecture/iOSArchitecture/ViewModel.h

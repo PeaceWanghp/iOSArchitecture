@@ -12,6 +12,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DiskManagementModel : NSObject
 
+- (void)loadDataCompletion:(void(^)(NSArray *items))completion;
+
+@end
+
+@interface DiskFile : NSObject
+
+@property (nonatomic,copy) NSString *url;       //"/user/xxx/abc.png"
+@property (nonatomic,copy) NSString *path;      //"/user/xxx"
+@property (nonatomic,copy) NSString *name;      //"abc.png"
+@property (nonatomic,copy) NSString *suffix;    //"png"
+
+@property (nonatomic,assign) BOOL isDrictor;
+@property (nonatomic,assign) NSInteger size;
+@property (nonatomic,copy) NSString *sizeDescription;
+
 @end
 
 NS_ASSUME_NONNULL_END

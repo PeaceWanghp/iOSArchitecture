@@ -29,6 +29,7 @@
 		CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA472191702F0058C8D9 /* ViewModel.m */; };
 		CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */; };
 		CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */; };
+		CEB8AA5521917A470058C8D9 /* ARDiskMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementTableViewController.m; sourceTree = "<group>"; };
 		CEB8AA50219177BC0058C8D9 /* DiskManagementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskManagementModel.h; sourceTree = "<group>"; };
 		CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementModel.m; sourceTree = "<group>"; };
+		CEB8AA5321917A470058C8D9 /* ARDiskMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDiskMananger.h; sourceTree = "<group>"; };
+		CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDiskMananger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */,
 				CEB8AA50219177BC0058C8D9 /* DiskManagementModel.h */,
 				CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */,
+				CEB8AA5321917A470058C8D9 /* ARDiskMananger.h */,
+				CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */,
 			);
 			path = DiskManagement;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
 				CE828717214A18F5008F11CD /* MRViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
+				CEB8AA5521917A470058C8D9 /* ARDiskMananger.m in Sources */,
 				CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */,
 				CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */,
 				CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */,
