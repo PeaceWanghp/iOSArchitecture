@@ -29,7 +29,8 @@
 		CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA472191702F0058C8D9 /* ViewModel.m */; };
 		CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */; };
 		CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */; };
-		CEB8AA5521917A470058C8D9 /* ARDiskMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */; };
+		CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */; };
+		CEE4C762219AEAFB00C3A8BD /* HPPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE4C761219AEAFB00C3A8BD /* HPPreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +75,10 @@
 		CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementTableViewController.m; sourceTree = "<group>"; };
 		CEB8AA50219177BC0058C8D9 /* DiskManagementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskManagementModel.h; sourceTree = "<group>"; };
 		CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementModel.m; sourceTree = "<group>"; };
-		CEB8AA5321917A470058C8D9 /* ARDiskMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDiskMananger.h; sourceTree = "<group>"; };
-		CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDiskMananger.m; sourceTree = "<group>"; };
+		CEB8AA5321917A470058C8D9 /* HPStorageMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPStorageMananger.h; sourceTree = "<group>"; };
+		CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPStorageMananger.m; sourceTree = "<group>"; };
+		CEE4C760219AEAFB00C3A8BD /* HPPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPreviewController.h; sourceTree = "<group>"; };
+		CEE4C761219AEAFB00C3A8BD /* HPPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPreviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		CE391512214609D70019DD5B /* iOSArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4C75F219AEA5900C3A8BD /* Preview */,
 				CE391513214609D70019DD5B /* AppDelegate.h */,
 				CE391514214609D70019DD5B /* AppDelegate.m */,
 				CE391516214609D70019DD5B /* ViewController.h */,
@@ -236,10 +240,19 @@
 				CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */,
 				CEB8AA50219177BC0058C8D9 /* DiskManagementModel.h */,
 				CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */,
-				CEB8AA5321917A470058C8D9 /* ARDiskMananger.h */,
-				CEB8AA5421917A470058C8D9 /* ARDiskMananger.m */,
+				CEB8AA5321917A470058C8D9 /* HPStorageMananger.h */,
+				CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */,
 			);
 			path = DiskManagement;
+			sourceTree = "<group>";
+		};
+		CEE4C75F219AEA5900C3A8BD /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				CEE4C760219AEAFB00C3A8BD /* HPPreviewController.h */,
+				CEE4C761219AEAFB00C3A8BD /* HPPreviewController.m */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +332,7 @@
 				CE391518214609D70019DD5B /* ViewController.m in Sources */,
 				CE82870021490527008F11CD /* MAnimalModel.m in Sources */,
 				CE828706214909AD008F11CD /* MAnimalViewController.m in Sources */,
+				CEE4C762219AEAFB00C3A8BD /* HPPreviewController.m in Sources */,
 				CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */,
 				CE391537214610590019DD5B /* AnimalModel.m in Sources */,
 				CE391523214609D90019DD5B /* main.m in Sources */,
@@ -326,7 +340,7 @@
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
 				CE828717214A18F5008F11CD /* MRViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
-				CEB8AA5521917A470058C8D9 /* ARDiskMananger.m in Sources */,
+				CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */,
 				CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */,
 				CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */,
 				CE828711214915D9008F11CD /* MAnimalEntity.m in Sources */,

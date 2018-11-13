@@ -8,25 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class DistItem;
 
 @interface DiskManagementModel : NSObject
 
-- (void)loadDataCompletion:(void(^)(NSArray *items))completion;
+@property (nonatomic,readonly) NSArray *dataSource;
+
+- (void)loadDataCompletion:(void(^)(BOOL value))completion;
+
+- (void)openItem:(DistItem *)item completion:(void(^)(BOOL value))completion;
+- (void)closeItem:(DistItem *)item;
 
 @end
 
-@interface DiskFile : NSObject
+@interface DistItem : NSObject
 
-@property (nonatomic,copy) NSString *url;       //"/user/xxx/abc.png"
-@property (nonatomic,copy) NSString *path;      //"/user/xxx"
-@property (nonatomic,copy) NSString *name;      //"abc.png"
-@property (nonatomic,copy) NSString *suffix;    //"png"
+@property (nonatomic,assign) BOOL isOpen;
 
+@property (nonatomic,assign) NSInteger level;
 @property (nonatomic,assign) BOOL isDrictor;
-@property (nonatomic,assign) NSInteger size;
-@property (nonatomic,copy) NSString *sizeDescription;
+
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *path;
+@property (nonatomic,copy) NSString *superPath;
+
+@property (nonatomic,assign) NSInteger size;//字节
 
 @end
-
-NS_ASSUME_NONNULL_END
