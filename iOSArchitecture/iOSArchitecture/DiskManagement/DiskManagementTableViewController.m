@@ -32,6 +32,8 @@
             [self.tableView reloadData];
         }
     }];
+    
+    [[self class] addTestFile];
 }
 
 #pragma mark -
@@ -49,10 +51,11 @@
     static NSString *identifier = @"identifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     DistItem *item = [_model.dataSource objectAtIndex:indexPath.row];
     cell.textLabel.text = [self textWithName:item.name level:item.level];
+    cell.detailTextLabel.text = [self textWithName:item.subtitle level:item.level];
     
     return cell;
 }
@@ -91,6 +94,33 @@
         [levelString appendString:@"   "];
     }
     return [NSString stringWithFormat:@"%@%@",levelString,name];
+}
+
++ (void)addTestFile {
+    
+    //创建NSFileManager对象
+    NSFileManager *fm = [NSFileManager defaultManager];
+    //定义路径(这里面要有该路径，而且要带着你要写入文件的文件名。)
+//    NSString *path = [NSString stringWithFormat:@"%@youyi.txt",NSTemporaryDirectory()];
+//    NSString *path = [NSString stringWithFormat:@"%@/Library/Preferences/youyi.txt",NSHomeDirectory()];
+//    NSString *path = [NSString stringWithFormat:@"%@/Library/youyi.txt",NSHomeDirectory()];
+//    NSString *path = [NSString stringWithFormat:@"%@/youyi.txt",NSHomeDirectory()];
+    NSString *path = [NSString stringWithFormat:@"%@/SystemData/youyi.txt",NSHomeDirectory()];
+
+    //1文件创建
+    //1)要存储在文件的内容
+    NSString *contentStr = @"每当我错过一个女孩，我就往山上放一块砖，于是乎有了长城";
+    //2)把字符串转化为data类型   （目的：用来存放到文件中）
+    NSData *data = [contentStr dataUsingEncoding:NSUTF8StringEncoding];
+    //3)创建文件
+    BOOL isCtreat;
+    isCtreat = [fm createFileAtPath:path contents:data attributes:nil];
+    if (isCtreat) {
+        NSLog(@"文件创建###成功###");
+    }
+    else {
+        NSLog(@"文件创建###失败###");
+    }
 }
 
 @end

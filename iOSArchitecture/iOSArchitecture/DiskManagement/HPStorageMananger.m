@@ -37,7 +37,7 @@
 
 #pragma mark -
 #pragma mark -- custome
-- (NSInteger)storageWithPath:(NSString *)path {
+- (NSInteger)fileAttributeWithPath:(NSString *)path {
     NSError *error;
     NSDictionary *fileAttribute = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
     if (fileAttribute && !error) {
@@ -48,6 +48,13 @@
     else {
         return 0;
     }
+}
+
+- (NSInteger)fileSizeWithPath:(NSString *)path {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]){
+        return [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileSize];
+    }
+    return 0;
 }
 
 - (NSArray *)components {
@@ -108,38 +115,6 @@
 
 #pragma mark -
 #pragma mark -- Private
-- (NSArray *)_sourceComponents {
-    NSLog(@"NSHomeDirectory = %@",NSHomeDirectory());
-    
-    NSMutableArray *mutableArray = [NSMutableArray array];
-    
-    NSArray *subpaths = [[NSFileManager defaultManager] subpathsAtPath:NSHomeDirectory()];
-    
-    
-    NSError *error = nil;
-    subpaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:NSHomeDirectory() error:&error];
-    
-    
-    
-    
-    for (NSString *subpath in subpaths) {
-        NSArray *components = [subpath componentsSeparatedByString:@"/"];
-        
-        HPDirectory *directory = [[HPDirectory alloc] init];
-        BOOL isDir;
-        [[NSFileManager defaultManager] fileExistsAtPath:subpath isDirectory:&isDir];
-        directory.isDrictor = isDir;
-        directory.path = subpath;
-        directory.name = components.lastObject;
-        directory.level = components.count;
-        
-        if (!directory.isDrictor) {
-            directory.suffix = [directory.name componentsSeparatedByString:@"."].lastObject;
-        }
-        
-        [mutableArray addObject:directory];
-    }
-    
 //    //Document
 //    NSArray *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    NSLog(@"document path = %@",documentPath);
@@ -151,32 +126,6 @@
 //    //Tmp
 //    NSString *tmpPath = NSTemporaryDirectory();
 //    NSLog(@"tmp path = %@",tmpPath);
-    
-    return mutableArray;
-}
-
-- (HPDirectory *)directoryWithPath:(NSString *)path level:(NSInteger)level
-{
-    if (!path || path.length == 0 || level <= 0) {
-        return nil;
-    }
-    
-    NSMutableArray *currentLevelPaths = [NSMutableArray array];
-    NSArray *subpaths = [[NSFileManager defaultManager] subpathsAtPath:path];
-    for (NSString *path in subpaths) {
-        NSArray *subpaths = [path componentsSeparatedByString:@"/"];
-        
-    }
-    
-    HPDirectory *directory = [[HPDirectory alloc] init];
-    directory.isDrictor = YES;
-    directory.path = path;
-    directory.name = level == 1 ? @"Root":@"";
-    directory.level = level;
-//    directory.subpaths = currentLevelPaths;
-    
-    return directory;
-}
 
 @end
 

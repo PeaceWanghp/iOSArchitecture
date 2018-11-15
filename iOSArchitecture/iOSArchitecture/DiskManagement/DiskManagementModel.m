@@ -105,7 +105,13 @@
         item.path = directory.path;
         item.name = directory.name;
         item.level = directory.level;
-        item.size = [_manager storageWithPath:directory.path];
+        
+        NSString *size = [self fileSize:[_manager fileSizeWithPath:directory.path]];
+        NSString *read = directory.isRead ? @"可读":@"不可读";
+        NSString *write = directory.isWrite ? @"可写":@"不可写";
+        NSString *delete = directory.isDelete ? @"可删":@"不可删";
+        item.subtitle = [NSString stringWithFormat:@"%@(%@,%@,%@)",size,read,write,delete];
+        
         [array addObject:item];
     }
     return array;
@@ -118,6 +124,41 @@
     else {
         return [_manager components];
     }
+}
+
+- (NSString *)fileSize:(NSInteger)size {
+    NSInteger gNumber = 1024 * 1024 * 1024;
+    NSInteger mNumber = 1024 * 1024;
+    NSInteger kNumber = 1024;
+    
+    NSInteger mSize = size%gNumber;
+    NSInteger kSize = mSize%mNumber;
+    NSInteger bSize = kSize%kNumber;
+    
+    NSInteger gValue = size/gNumber;
+    NSInteger mValue = mSize/mNumber;
+    NSInteger kValue = kSize/kNumber;
+    NSInteger bValue = bSize;
+    
+//    NSLog(@"gSize = %ld,mSize = %ld,kSize = %ld,bSize = %ld",gSize,mSize,kSize,bSize);
+    return [NSString stringWithFormat:@"%ldG,%ldM,%ldK,%ldB",(long)gValue,(long)mValue,(long)kValue,(long)bValue];
+    
+//    if (gValue > 0) {
+//        //G
+//        return [NSString stringWithFormat:@"%ld.%ldG",(long)gSize,(long)mSize];
+//    }
+//    else if (gValue > 0 && mValue > 0) {
+//        //M
+//        return [NSString stringWithFormat:@"%ld.%ldM",(long)mNumber,(long)kSize];
+//    }
+//    else if (gValue > 0 && mValue > 0 && kValue > 0) {
+//        //KB
+//        return [NSString stringWithFormat:@"%ld.%ldKB",(long)kSize,(long)mSize];
+//    }
+//    else {
+//        //B
+//        return [NSString stringWithFormat:@"%ldB",(long)bSize];
+//    }
 }
 
 @end

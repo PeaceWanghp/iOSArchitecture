@@ -32,6 +32,6 @@
 @property (nonatomic,copy) NSString *path;
 @property (nonatomic,copy) NSString *superPath;
 
-@property (nonatomic,assign) NSInteger size;//字节
+@property (nonatomic,copy) NSString *subtitle;
 
 @end

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)diskManager;
 
-- (NSInteger)storageWithPath:(NSString *)path;
+- (NSInteger)fileSizeWithPath:(NSString *)path;
 
 - (NSArray *)components;
 - (NSArray *)componentsWithPath:(NSString *)path;
