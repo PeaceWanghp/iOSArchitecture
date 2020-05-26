@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "AnimalTableViewController.h"
-#import "MAnimalViewController.h"
+#import "MAnimalsViewController.h"
 #import "MRViewController.h"
 #import "DiskManagementTableViewController.h"
 

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MAnimalViewModel.h"
+#import "MAnimalsViewModel.h"
 
 @interface MAnimalTableView : UITableView
 
-@property (nonatomic,strong) MAnimalViewModel *viewModel;
+@property (nonatomic,strong) MAnimalsViewModel *viewModel;
 
 - (void)refreshData;
 

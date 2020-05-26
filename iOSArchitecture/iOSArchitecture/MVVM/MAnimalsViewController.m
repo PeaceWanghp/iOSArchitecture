@@ -6,15 +6,15 @@
 //  Copyright © 2018 peace. All rights reserved.
 //
 
-#import "MAnimalViewController.h"
+#import "MAnimalsViewController.h"
 
 #import "MAnimalTableView.h"
 
-@interface MAnimalViewController ()
+@interface MAnimalsViewController ()
 
 @end
 
-@implementation MAnimalViewController
+@implementation MAnimalsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    NSLog(@"%s",__func__);
 }
 
 - (void)refreshAction {

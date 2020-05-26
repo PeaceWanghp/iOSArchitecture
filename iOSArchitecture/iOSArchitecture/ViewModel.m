@@ -27,7 +27,7 @@
         item = [[ACItem alloc] init];
         item.title = @"MVVM";
         item.subtitle = @"Modle View ViewModel";
-        item.className = @"MAnimalViewController";
+        item.className = @"MAnimalsViewController";
         item.classType = ACUIViewController;
         [_dataSource addObject:item];
         

@@ -22,10 +22,14 @@
         self.delegate = self;
         self.dataSource = self;
         
-        self.viewModel = [[MAnimalViewModel alloc] init];
+        self.viewModel = [[MAnimalsViewModel alloc] init];
         self.viewModel.delegate = self;
     }
     return self;
+}
+
+- (void)dealloc {
+    NSLog(@"%s",__func__);
 }
 
 - (void)refreshData {
@@ -34,12 +38,12 @@
 
 #pragma mark -
 #pragma mark -- MAnimalViewModel Delegate
-- (void)viewModel:(MAnimalViewModel *)viewModel reloadRow:(NSInteger)row {
+- (void)viewModel:(MAnimalsViewModel *)viewModel reloadRow:(NSInteger)row {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
-- (void)reloadDataWithViewModel:(MAnimalViewModel *)viewModel {
+- (void)reloadDataWithViewModel:(MAnimalsViewModel *)viewModel {
     [self reloadData];
 }
 
@@ -61,11 +65,11 @@
         cell = [[MAnimalCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
-    MAnimalViewEntity *entity = [_viewModel animalEntityWitIndexPath:indexPath.row];
+    MAnimalViewModel *viewModel = [_viewModel animalEntityWitIndexPath:indexPath.row];
     
-    cell.textLabel.text = entity.name;
-    cell.detailTextLabel.text = entity.summary;
-    [cell showImageWithData:entity.imageData];
+    cell.textLabel.text = viewModel.name;
+    cell.detailTextLabel.text = viewModel.summary;
+    [cell showImageWithData:viewModel.imageData];
     
     return cell;
 }

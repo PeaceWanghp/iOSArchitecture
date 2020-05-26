@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MAnimalViewController : UIViewController
+@interface MAnimalsViewController : UIViewController
 
 @end
