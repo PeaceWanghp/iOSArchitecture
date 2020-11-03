@@ -22,7 +22,6 @@
 		CE828706214909AD008F11CD /* MAnimalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828705214909AD008F11CD /* MAnimalsViewController.m */; };
 		CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828708214909DE008F11CD /* MAnimalTableView.m */; };
 		CE828713214A13E5008F11CD /* jsonString.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828712214A13E5008F11CD /* jsonString.json */; };
-		CE828717214A18F5008F11CD /* MRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828716214A18F5008F11CD /* MRViewController.m */; };
 		CE828719214B9C96008F11CD /* animal.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828718214B9C96008F11CD /* animal.json */; };
 		CE95C07D247CCCB10055EA54 /* MAnimalViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95C07C247CCCB10055EA54 /* MAnimalViewModel.m */; };
 		CE95C080247CCE320055EA54 /* MAnimalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95C07F247CCE320055EA54 /* MAnimalModel.m */; };
@@ -62,8 +61,6 @@
 		CE828707214909DE008F11CD /* MAnimalTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalTableView.h; sourceTree = "<group>"; };
 		CE828708214909DE008F11CD /* MAnimalTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalTableView.m; sourceTree = "<group>"; };
 		CE828712214A13E5008F11CD /* jsonString.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonString.json; sourceTree = "<group>"; };
-		CE828715214A18F5008F11CD /* MRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRViewController.h; sourceTree = "<group>"; };
-		CE828716214A18F5008F11CD /* MRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRViewController.m; sourceTree = "<group>"; };
 		CE828718214B9C96008F11CD /* animal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animal.json; sourceTree = "<group>"; };
 		CE95C07B247CCCB10055EA54 /* MAnimalViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalViewModel.h; sourceTree = "<group>"; };
 		CE95C07C247CCCB10055EA54 /* MAnimalViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalViewModel.m; sourceTree = "<group>"; };
@@ -119,7 +116,6 @@
 				CEB8AA472191702F0058C8D9 /* ViewModel.m */,
 				CE39152C21460F770019DD5B /* MVC */,
 				CE39152D21460F820019DD5B /* MVVM */,
-				CE828714214A18CD008F11CD /* MVVM+RAC */,
 				CEB8AA4A2191730B0058C8D9 /* MVP */,
 				CEB8AA4B219173180058C8D9 /* VIPER */,
 				CEE4C75F219AEA5900C3A8BD /* Preview */,
@@ -208,15 +204,6 @@
 				CE39153C214619A00019DD5B /* AnimalEntity.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CE828714214A18CD008F11CD /* MVVM+RAC */ = {
-			isa = PBXGroup;
-			children = (
-				CE828715214A18F5008F11CD /* MRViewController.h */,
-				CE828716214A18F5008F11CD /* MRViewController.m */,
-			);
-			path = "MVVM+RAC";
 			sourceTree = "<group>";
 		};
 		CEB8AA4A2191730B0058C8D9 /* MVP */ = {
@@ -339,7 +326,6 @@
 				CE391523214609D90019DD5B /* main.m in Sources */,
 				CE391515214609D70019DD5B /* AppDelegate.m in Sources */,
 				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
-				CE828717214A18F5008F11CD /* MRViewController.m in Sources */,
 				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
 				CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */,
 				CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */,

@@ -32,13 +32,6 @@
         [_dataSource addObject:item];
         
         item = [[ACItem alloc] init];
-        item.title = @"MVVM+RAC";
-        item.subtitle = @"Modle View ViewModel + RAC";
-        item.className = @"MRViewController";
-        item.classType = ACUIViewController;
-        [_dataSource addObject:item];
-        
-        item = [[ACItem alloc] init];
         item.title = @"MVP";
         item.subtitle = @"Model View Presenter";
         [_dataSource addObject:item];
