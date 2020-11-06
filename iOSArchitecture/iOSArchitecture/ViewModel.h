@@ -19,8 +19,15 @@ static NSString *const ACUITableViewController = @"UITableViewController";
 
 @end
 
+typedef enum : NSUInteger {
+    ACType_None,
+    ACType_Group,
+    ACType_Item,
+} ACType;
+
 @interface ACItem : NSObject
 
+@property (nonatomic,assign) ACType type;
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *subtitle;
 @property (nonatomic,copy) NSString *className;

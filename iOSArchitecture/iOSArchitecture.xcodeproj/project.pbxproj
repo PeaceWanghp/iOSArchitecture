@@ -12,19 +12,6 @@
 		CE39151D214609D90019DD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE39151C214609D90019DD5B /* Assets.xcassets */; };
 		CE391520214609D90019DD5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE39151E214609D90019DD5B /* LaunchScreen.storyboard */; };
 		CE391523214609D90019DD5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391522214609D90019DD5B /* main.m */; };
-		CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391530214610060019DD5B /* AnimalTableViewController.m */; };
-		CE391534214610310019DD5B /* AnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391533214610310019DD5B /* AnimalCell.m */; };
-		CE391537214610590019DD5B /* AnimalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391536214610590019DD5B /* AnimalModel.m */; };
-		CE39153D214619A00019DD5B /* AnimalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE39153C214619A00019DD5B /* AnimalEntity.m */; };
-		CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286F9214904B2008F11CD /* MAnimalCell.m */; };
-		CE8286FD21490506008F11CD /* MAnimalsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286FC21490506008F11CD /* MAnimalsViewModel.m */; };
-		CE82870021490527008F11CD /* MAnimalsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8286FF21490527008F11CD /* MAnimalsModel.m */; };
-		CE828706214909AD008F11CD /* MAnimalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828705214909AD008F11CD /* MAnimalsViewController.m */; };
-		CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE828708214909DE008F11CD /* MAnimalTableView.m */; };
-		CE828713214A13E5008F11CD /* jsonString.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828712214A13E5008F11CD /* jsonString.json */; };
-		CE828719214B9C96008F11CD /* animal.json in Resources */ = {isa = PBXBuildFile; fileRef = CE828718214B9C96008F11CD /* animal.json */; };
-		CE95C07D247CCCB10055EA54 /* MAnimalViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95C07C247CCCB10055EA54 /* MAnimalViewModel.m */; };
-		CE95C080247CCE320055EA54 /* MAnimalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95C07F247CCE320055EA54 /* MAnimalModel.m */; };
 		CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA472191702F0058C8D9 /* ViewModel.m */; };
 		CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */; };
 		CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */; };
@@ -42,30 +29,6 @@
 		CE39151F214609D90019DD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE391521214609D90019DD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE391522214609D90019DD5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE39152F214610060019DD5B /* AnimalTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalTableViewController.h; sourceTree = "<group>"; };
-		CE391530214610060019DD5B /* AnimalTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalTableViewController.m; sourceTree = "<group>"; };
-		CE391532214610310019DD5B /* AnimalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalCell.h; sourceTree = "<group>"; };
-		CE391533214610310019DD5B /* AnimalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalCell.m; sourceTree = "<group>"; };
-		CE391535214610590019DD5B /* AnimalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalModel.h; sourceTree = "<group>"; };
-		CE391536214610590019DD5B /* AnimalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalModel.m; sourceTree = "<group>"; };
-		CE39153B214619A00019DD5B /* AnimalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalEntity.h; sourceTree = "<group>"; };
-		CE39153C214619A00019DD5B /* AnimalEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalEntity.m; sourceTree = "<group>"; };
-		CE8286F8214904B2008F11CD /* MAnimalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalCell.h; sourceTree = "<group>"; };
-		CE8286F9214904B2008F11CD /* MAnimalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalCell.m; sourceTree = "<group>"; };
-		CE8286FB21490506008F11CD /* MAnimalsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalsViewModel.h; sourceTree = "<group>"; };
-		CE8286FC21490506008F11CD /* MAnimalsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalsViewModel.m; sourceTree = "<group>"; };
-		CE8286FE21490527008F11CD /* MAnimalsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalsModel.h; sourceTree = "<group>"; };
-		CE8286FF21490527008F11CD /* MAnimalsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalsModel.m; sourceTree = "<group>"; };
-		CE828704214909AD008F11CD /* MAnimalsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalsViewController.h; sourceTree = "<group>"; };
-		CE828705214909AD008F11CD /* MAnimalsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalsViewController.m; sourceTree = "<group>"; };
-		CE828707214909DE008F11CD /* MAnimalTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalTableView.h; sourceTree = "<group>"; };
-		CE828708214909DE008F11CD /* MAnimalTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalTableView.m; sourceTree = "<group>"; };
-		CE828712214A13E5008F11CD /* jsonString.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonString.json; sourceTree = "<group>"; };
-		CE828718214B9C96008F11CD /* animal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animal.json; sourceTree = "<group>"; };
-		CE95C07B247CCCB10055EA54 /* MAnimalViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalViewModel.h; sourceTree = "<group>"; };
-		CE95C07C247CCCB10055EA54 /* MAnimalViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalViewModel.m; sourceTree = "<group>"; };
-		CE95C07E247CCE320055EA54 /* MAnimalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAnimalModel.h; sourceTree = "<group>"; };
-		CE95C07F247CCE320055EA54 /* MAnimalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAnimalModel.m; sourceTree = "<group>"; };
 		CEB8AA462191702F0058C8D9 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		CEB8AA472191702F0058C8D9 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		CEB8AA4D219177730058C8D9 /* DiskManagementTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskManagementTableViewController.h; sourceTree = "<group>"; };
@@ -114,10 +77,6 @@
 				CE391517214609D70019DD5B /* ViewController.m */,
 				CEB8AA462191702F0058C8D9 /* ViewModel.h */,
 				CEB8AA472191702F0058C8D9 /* ViewModel.m */,
-				CE39152C21460F770019DD5B /* MVC */,
-				CE39152D21460F820019DD5B /* MVVM */,
-				CEB8AA4A2191730B0058C8D9 /* MVP */,
-				CEB8AA4B219173180058C8D9 /* VIPER */,
 				CEE4C75F219AEA5900C3A8BD /* Preview */,
 				CEB8AA4C219173220058C8D9 /* DiskManagement */,
 				CE39151C214609D90019DD5B /* Assets.xcassets */,
@@ -126,98 +85,6 @@
 				CE391522214609D90019DD5B /* main.m */,
 			);
 			path = iOSArchitecture;
-			sourceTree = "<group>";
-		};
-		CE39152C21460F770019DD5B /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				CE39152F214610060019DD5B /* AnimalTableViewController.h */,
-				CE391530214610060019DD5B /* AnimalTableViewController.m */,
-				CE82870E21490ABC008F11CD /* Model */,
-				CE82870D21490AAF008F11CD /* View */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
-		CE39152D21460F820019DD5B /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				CE828704214909AD008F11CD /* MAnimalsViewController.h */,
-				CE828705214909AD008F11CD /* MAnimalsViewController.m */,
-				CE82870C21490A3E008F11CD /* Model */,
-				CE82870B21490A35008F11CD /* ViewModel */,
-				CE82870A21490A21008F11CD /* View */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		CE82870A21490A21008F11CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE828707214909DE008F11CD /* MAnimalTableView.h */,
-				CE828708214909DE008F11CD /* MAnimalTableView.m */,
-				CE8286F8214904B2008F11CD /* MAnimalCell.h */,
-				CE8286F9214904B2008F11CD /* MAnimalCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE82870B21490A35008F11CD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				CE8286FB21490506008F11CD /* MAnimalsViewModel.h */,
-				CE8286FC21490506008F11CD /* MAnimalsViewModel.m */,
-				CE95C07B247CCCB10055EA54 /* MAnimalViewModel.h */,
-				CE95C07C247CCCB10055EA54 /* MAnimalViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CE82870C21490A3E008F11CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE828712214A13E5008F11CD /* jsonString.json */,
-				CE8286FE21490527008F11CD /* MAnimalsModel.h */,
-				CE8286FF21490527008F11CD /* MAnimalsModel.m */,
-				CE95C07E247CCE320055EA54 /* MAnimalModel.h */,
-				CE95C07F247CCE320055EA54 /* MAnimalModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CE82870D21490AAF008F11CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE391532214610310019DD5B /* AnimalCell.h */,
-				CE391533214610310019DD5B /* AnimalCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE82870E21490ABC008F11CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE828718214B9C96008F11CD /* animal.json */,
-				CE391535214610590019DD5B /* AnimalModel.h */,
-				CE391536214610590019DD5B /* AnimalModel.m */,
-				CE39153B214619A00019DD5B /* AnimalEntity.h */,
-				CE39153C214619A00019DD5B /* AnimalEntity.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CEB8AA4A2191730B0058C8D9 /* MVP */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MVP;
-			sourceTree = "<group>";
-		};
-		CEB8AA4B219173180058C8D9 /* VIPER */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIPER;
 			sourceTree = "<group>";
 		};
 		CEB8AA4C219173220058C8D9 /* DiskManagement */ = {
@@ -299,8 +166,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE828713214A13E5008F11CD /* jsonString.json in Resources */,
-				CE828719214B9C96008F11CD /* animal.json in Resources */,
 				CE391520214609D90019DD5B /* LaunchScreen.storyboard in Resources */,
 				CE39151D214609D90019DD5B /* Assets.xcassets in Resources */,
 			);
@@ -313,24 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8286FD21490506008F11CD /* MAnimalsViewModel.m in Sources */,
-				CE39153D214619A00019DD5B /* AnimalEntity.m in Sources */,
 				CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */,
 				CE391518214609D70019DD5B /* ViewController.m in Sources */,
-				CE82870021490527008F11CD /* MAnimalsModel.m in Sources */,
-				CE828706214909AD008F11CD /* MAnimalsViewController.m in Sources */,
 				CEE4C762219AEAFB00C3A8BD /* HPPreviewController.m in Sources */,
-				CE828709214909DE008F11CD /* MAnimalTableView.m in Sources */,
-				CE95C080247CCE320055EA54 /* MAnimalModel.m in Sources */,
-				CE391537214610590019DD5B /* AnimalModel.m in Sources */,
 				CE391523214609D90019DD5B /* main.m in Sources */,
 				CE391515214609D70019DD5B /* AppDelegate.m in Sources */,
-				CE391531214610060019DD5B /* AnimalTableViewController.m in Sources */,
-				CE391534214610310019DD5B /* AnimalCell.m in Sources */,
 				CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */,
 				CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */,
-				CE95C07D247CCCB10055EA54 /* MAnimalViewModel.m in Sources */,
-				CE8286FA214904B2008F11CD /* MAnimalCell.m in Sources */,
 				CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

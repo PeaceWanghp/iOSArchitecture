@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 
-#import "AnimalTableViewController.h"
-#import "MAnimalsViewController.h"
 #import "DiskManagementTableViewController.h"
 
 #import "ViewModel.h"
