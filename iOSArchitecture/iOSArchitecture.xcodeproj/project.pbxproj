@@ -12,10 +12,15 @@
 		CE39151D214609D90019DD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE39151C214609D90019DD5B /* Assets.xcassets */; };
 		CE391520214609D90019DD5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE39151E214609D90019DD5B /* LaunchScreen.storyboard */; };
 		CE391523214609D90019DD5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE391522214609D90019DD5B /* main.m */; };
-		CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA472191702F0058C8D9 /* ViewModel.m */; };
 		CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */; };
 		CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */; };
 		CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */; };
+		CECE304025563A5F0041658A /* BPresentHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303625563A5F0041658A /* BPresentHeaderModel.m */; };
+		CECE304125563A5F0041658A /* BPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303725563A5F0041658A /* BPresentController.m */; };
+		CECE304225563A5F0041658A /* BPresentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303825563A5F0041658A /* BPresentHeaderView.m */; };
+		CECE304325563A5F0041658A /* BPresentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303925563A5F0041658A /* BPresentModel.m */; };
+		CECE304425563A5F0041658A /* BPresentItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303A25563A5F0041658A /* BPresentItemModel.m */; };
+		CECE304525563A5F0041658A /* BPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE303B25563A5F0041658A /* BPWebViewController.m */; };
 		CEE4C762219AEAFB00C3A8BD /* HPPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE4C761219AEAFB00C3A8BD /* HPPreviewController.m */; };
 /* End PBXBuildFile section */
 
@@ -29,14 +34,24 @@
 		CE39151F214609D90019DD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE391521214609D90019DD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE391522214609D90019DD5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CEB8AA462191702F0058C8D9 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		CEB8AA472191702F0058C8D9 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		CEB8AA4D219177730058C8D9 /* DiskManagementTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskManagementTableViewController.h; sourceTree = "<group>"; };
 		CEB8AA4E219177730058C8D9 /* DiskManagementTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementTableViewController.m; sourceTree = "<group>"; };
 		CEB8AA50219177BC0058C8D9 /* DiskManagementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskManagementModel.h; sourceTree = "<group>"; };
 		CEB8AA51219177BC0058C8D9 /* DiskManagementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiskManagementModel.m; sourceTree = "<group>"; };
 		CEB8AA5321917A470058C8D9 /* HPStorageMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPStorageMananger.h; sourceTree = "<group>"; };
 		CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPStorageMananger.m; sourceTree = "<group>"; };
+		CECE303425563A5F0041658A /* BPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPWebViewController.h; sourceTree = "<group>"; };
+		CECE303525563A5F0041658A /* BPresentItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPresentItemModel.h; sourceTree = "<group>"; };
+		CECE303625563A5F0041658A /* BPresentHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPresentHeaderModel.m; sourceTree = "<group>"; };
+		CECE303725563A5F0041658A /* BPresentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPresentController.m; sourceTree = "<group>"; };
+		CECE303825563A5F0041658A /* BPresentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPresentHeaderView.m; sourceTree = "<group>"; };
+		CECE303925563A5F0041658A /* BPresentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPresentModel.m; sourceTree = "<group>"; };
+		CECE303A25563A5F0041658A /* BPresentItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPresentItemModel.m; sourceTree = "<group>"; };
+		CECE303B25563A5F0041658A /* BPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPWebViewController.m; sourceTree = "<group>"; };
+		CECE303C25563A5F0041658A /* BPresentHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPresentHeaderModel.h; sourceTree = "<group>"; };
+		CECE303D25563A5F0041658A /* BPresentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPresentModel.h; sourceTree = "<group>"; };
+		CECE303E25563A5F0041658A /* BPresentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPresentHeaderView.h; sourceTree = "<group>"; };
+		CECE303F25563A5F0041658A /* BPresentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPresentController.h; sourceTree = "<group>"; };
 		CEE4C760219AEAFB00C3A8BD /* HPPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPreviewController.h; sourceTree = "<group>"; };
 		CEE4C761219AEAFB00C3A8BD /* HPPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPreviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,8 +90,7 @@
 				CE391514214609D70019DD5B /* AppDelegate.m */,
 				CE391516214609D70019DD5B /* ViewController.h */,
 				CE391517214609D70019DD5B /* ViewController.m */,
-				CEB8AA462191702F0058C8D9 /* ViewModel.h */,
-				CEB8AA472191702F0058C8D9 /* ViewModel.m */,
+				CECE303325563A5F0041658A /* BasePresent */,
 				CEE4C75F219AEA5900C3A8BD /* Preview */,
 				CEB8AA4C219173220058C8D9 /* DiskManagement */,
 				CE39151C214609D90019DD5B /* Assets.xcassets */,
@@ -98,6 +112,25 @@
 				CEB8AA5421917A470058C8D9 /* HPStorageMananger.m */,
 			);
 			path = DiskManagement;
+			sourceTree = "<group>";
+		};
+		CECE303325563A5F0041658A /* BasePresent */ = {
+			isa = PBXGroup;
+			children = (
+				CECE303F25563A5F0041658A /* BPresentController.h */,
+				CECE303725563A5F0041658A /* BPresentController.m */,
+				CECE303525563A5F0041658A /* BPresentItemModel.h */,
+				CECE303A25563A5F0041658A /* BPresentItemModel.m */,
+				CECE303E25563A5F0041658A /* BPresentHeaderView.h */,
+				CECE303825563A5F0041658A /* BPresentHeaderView.m */,
+				CECE303D25563A5F0041658A /* BPresentModel.h */,
+				CECE303925563A5F0041658A /* BPresentModel.m */,
+				CECE303425563A5F0041658A /* BPWebViewController.h */,
+				CECE303B25563A5F0041658A /* BPWebViewController.m */,
+				CECE303C25563A5F0041658A /* BPresentHeaderModel.h */,
+				CECE303625563A5F0041658A /* BPresentHeaderModel.m */,
+			);
+			path = BasePresent;
 			sourceTree = "<group>";
 		};
 		CEE4C75F219AEA5900C3A8BD /* Preview */ = {
@@ -135,7 +168,7 @@
 		CE391508214609D70019DD5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = peace;
 				TargetAttributes = {
 					CE39150F214609D70019DD5B = {
@@ -178,14 +211,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB8AA482191702F0058C8D9 /* ViewModel.m in Sources */,
 				CE391518214609D70019DD5B /* ViewController.m in Sources */,
+				CECE304325563A5F0041658A /* BPresentModel.m in Sources */,
 				CEE4C762219AEAFB00C3A8BD /* HPPreviewController.m in Sources */,
 				CE391523214609D90019DD5B /* main.m in Sources */,
 				CE391515214609D70019DD5B /* AppDelegate.m in Sources */,
+				CECE304425563A5F0041658A /* BPresentItemModel.m in Sources */,
+				CECE304225563A5F0041658A /* BPresentHeaderView.m in Sources */,
 				CEB8AA5521917A470058C8D9 /* HPStorageMananger.m in Sources */,
+				CECE304025563A5F0041658A /* BPresentHeaderModel.m in Sources */,
 				CEB8AA4F219177730058C8D9 /* DiskManagementTableViewController.m in Sources */,
 				CEB8AA52219177BC0058C8D9 /* DiskManagementModel.m in Sources */,
+				CECE304525563A5F0041658A /* BPWebViewController.m in Sources */,
+				CECE304125563A5F0041658A /* BPresentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +267,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -254,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +326,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -306,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

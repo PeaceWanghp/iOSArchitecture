@@ -10,10 +10,9 @@
 
 #import "DiskManagementTableViewController.h"
 
-#import "ViewModel.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) ViewModel *viewModel;
+@interface ViewController ()
+
 @end
 
 @implementation ViewController
@@ -22,56 +21,30 @@
 #pragma mark -- Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    _viewModel = [[ViewModel alloc] init];
+    [self.model appendOpenedHeader:@"架构："];
+    [self.model appendDarkItemWithTitle:@"架构是系统的顶层结构" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计：架构 = 模块 + 交互" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计的目的一：为了隔离关注点，降低复杂度" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计的目的二：为了更好的分工合作" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计的任务是：划分模块，设计模块的交互方式" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计的指导思想就是面向对象的思想" class:[UIViewController class]];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark -
-#pragma mark -- UITableView
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _viewModel.dataSource.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"identifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
+    [self.model appendOpenedHeader:@"架构设计流程："];
+    [self.model appendDarkItemWithTitle:@"业务架构(来源于客户需求)\n->\n领域架构(按“功能需求”提炼领域架构关系图)\n->\n软件架构(一、按“功能需求”直接映射xx子系统，二、按“质量需求”进一步细化各个子系统)"
+                                  class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"业务需求：分为“功能需求”和“质量需求”"
+                                  class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计第一难点是：评估架构方案，可采用“综合/360度评估”的方式"
+                                  class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"架构设计第二难点是：选择架构方案，可采用“按优先级选择”的方式"
+                                  class:[UIViewController class]];
     
-    ACItem *item = [_viewModel.dataSource objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.title;
-    cell.detailTextLabel.text = item.subtitle;
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ACItem *item = [_viewModel.dataSource objectAtIndex:indexPath.row];
-    if (item.className) {
-        Class class = NSClassFromString(item.className);
-        UIViewController *viewController;
-        
-        if ([item.classType isEqualToString:ACUITableViewController]) {
-            viewController = [[class alloc] initWithStyle:UITableViewStylePlain];
-        }
-        else if ([item.classType isEqualToString:ACUIViewController]) {
-            viewController = [[class alloc] init];
-        }
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
+    [self.model appendOpenedHeader:@"架构设计技巧："];
+    [self.model appendDarkItemWithTitle:@"架构设计原则：“客户需求优先原则”和“适当超前原则”" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"“拆”是架构设计的屠龙刀，拆完后“合”才能提供完整的业务" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"拆的手段有：拆系统、拆模块、拆类、拆方法" class:[UIViewController class]];
+    [self.model appendDarkItemWithTitle:@"合的手段有：中介者、依赖、组合" class:[UIViewController class]];
 }
 
 @end
